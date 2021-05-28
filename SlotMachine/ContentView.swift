@@ -18,7 +18,7 @@ struct ContentView: View {
         
         ZStack {
             
-            //Background
+            // Задний фон
             Rectangle().foregroundColor(Color(red: 200/255, green: 143/255, blue: 32/255))
                 .edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
             
@@ -28,7 +28,7 @@ struct ContentView: View {
             
             VStack {
                 Spacer()
-                // Title
+                // Заголовок
                 HStack {
                     Image(systemName: "star.fill").foregroundColor(.yellow)
                     
@@ -41,7 +41,7 @@ struct ContentView: View {
                 
                 Spacer()
                 
-                //Credits counter
+                // Счетчик кредитов
                 Text("Credits" + String(credits))
                     .foregroundColor(.black)
                     .padding(.all,10)
@@ -50,7 +50,7 @@ struct ContentView: View {
                 
                 Spacer()
                 
-                //Cards
+                // Карточки
                 HStack {
                     Spacer()
                     
@@ -77,7 +77,7 @@ struct ContentView: View {
                 
                 Spacer()
                 
-                //Button
+                // Кнопка
                 Button(action: {
                     
                     //Change the images
