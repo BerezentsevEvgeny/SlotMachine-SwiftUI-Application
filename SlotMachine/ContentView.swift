@@ -9,16 +9,14 @@ import SwiftUI
 
 struct ContentView: View {
     
-    private var symbols = ["apple", "star", "cherry"]
     @State private var numbers = [1, 2, 0]
     @State private var credits = 1000
+    
+    private var symbols = ["apple", "star", "cherry"]
     private var betAmount = 5
     
     var body: some View {
-        
         ZStack {
-            
-            // Задний фон
             Rectangle().foregroundColor(Color(red: 200/255, green: 143/255, blue: 32/255))
                 .edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
             
@@ -28,7 +26,7 @@ struct ContentView: View {
             
             VStack {
                 Spacer()
-                // Заголовок
+                
                 HStack {
                     Image(systemName: "star.fill").foregroundColor(.yellow)
                     
@@ -41,7 +39,7 @@ struct ContentView: View {
                 
                 Spacer()
                 
-                // Счетчик кредитов
+                // Credits count
                 Text("Credits" + String(credits))
                     .foregroundColor(.black)
                     .padding(.all,10)
@@ -50,7 +48,7 @@ struct ContentView: View {
                 
                 Spacer()
                 
-                // Карточки
+                // Cards
                 HStack {
                     Spacer()
                     
@@ -77,10 +75,9 @@ struct ContentView: View {
                 
                 Spacer()
                 
-                // Кнопка
                 Button(action: {
                     
-                    //Change the images
+                    // Change images
                     self.numbers[0] = Int.random(in: 0...symbols.count - 1)
                     
                     self.numbers[1] = Int.random(in: 0...symbols.count - 1)
